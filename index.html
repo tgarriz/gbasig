@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geodesia</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="shortcut icon" type="image/png" href="./app/img/favicon.png" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="script/ext-3.4.0/resources/css/ext-all.css" />
+        <link rel="stylesheet" type="text/css" href="script/ext-3.4.0/resources/css/xtheme-gray.css" />
+        <link rel="stylesheet" type="text/css" href="script/ext-3.4.0/examples/shared/examples.css" />
+        <link rel="stylesheet" type="text/css" href="./theme/openlayers/default/style.css" />
+        <link rel="stylesheet" type="text/css" href="./theme/openlayers/default/google.css" />
+        <link rel="stylesheet" type="text/css" href="./theme/geoext/css/geoext-all.css" />
+        <link rel="stylesheet" type="text/css" href="./theme/gxp/all.css"/>
+        <link rel="stylesheet" type="text/css" href="./theme/style.css"/>
+        <link rel="stylesheet" type="text/css" href="./theme/gxp/all.css"/>
+        <link rel="stylesheet" type="text/css" href="./theme/viewer.css"/>
+        <link rel="stylesheet" type="text/css" href="./script/tools/ordenCapas/ordenCapas.css">
+
+        <script type="text/javascript" src="script/ext-3.4.0/adapter/ext/ext-base.js"></script>
+        <script type="text/javascript" src="script/ext-3.4.0/ext-all.js"></script>
+        <script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
+	<!--<script type="text/javascript" src="./script/geoext/lib/GeoExt.js"></script>-->
+	<script type="text/javascript" src="./script/OpenLayers.js"></script>
+        <script type="text/javascript" src="./script/GeoExt.js"></script>
+
+        <script type="text/javascript" src="./script/gxp/script/loader.js"></script>
+        <script type="text/javascript" src="./script/RowExpander.js"></script>
+        <script type="text/javascript" src="sources.js"></script>
+        <script type="text/javascript" src="layers.js"></script>
+        <script type="text/javascript" src="groups.js"></script>
+        <script type="text/javascript" src="utils.js"></script>
+	<!--Librerias agregadas para ejecutar el streetview-->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/proj4js/1.1.0/proj4js-compressed.js" type="text/javascript"></script>
+	<script src="./script/tools/streetView.class.js"></script>
+
+        <script type="text/javascript" src="./script/tools/ordenCapas/ordenCapas.class.js"></script>
+        <script type="text/javascript" src="./script/tools/busquedaPlanosCatastro/main.js"></script>
+
+        <script type="text/javascript" src="./script/mootools-core-1.4.5-full-nocompat-yc.js"></script>
+        <script type="text/javascript" src="./script/mootools-more-1.4.0.1.js"></script>
+
+        <script type="text/javascript" src="./script/tools/nomenclatura.class.js"></script>
+        <script type="text/javascript" src="./script/tools/partido_partida.class.js"></script>
+        <script type="text/javascript" src="./script/tools/numero_plano.class.js"></script>
+
+        <script type="text/javascript" src="app.js"></script>
+
+    </head>
+    <body>
+    	<div id="mapa"></div>
+    	<div id="nomenclatura" class="x-hidden">
+            <!-- <div>
+                <label>Partido:</label>
+                <input id="partidoN" type="text" tipo="numero" largo="3"/>
+                <br>
+                <label>Circunscripción:</label>
+                <input id="circunscripcionN" type="text" tipo="texto" largo="2"/>
+                <br>
+                <label>Sección:</label>
+                <input id="seccionN" type="text" tipo="texto" largo="2"/>
+                <br>
+                <label>Chacra:</label>
+                <input id="chacraNN" type="text" tipo="numero" largo="4"/><input id="chacraTN" type="text" tipo="texto" largo="3"/>
+                <br>
+                <label>Quinta:</label>
+                <input id="quintaNN" type="text" tipo="numero" largo="4"/><input id="quintaTN" type="text" tipo="texto" largo="3"/>
+                <br>
+                <label>Fracción:</label>
+                <input id="fraccionNN" type="text" tipo="numero" largo="4"/><input id="fraccionTN" type="text" tipo="texto" largo="3"/>
+                <br>
+                <label>Manzana:</label>
+                <input id="manzanaNN" type="text" tipo="numero" largo="4"/><input id="manzanaTN" type="text" tipo="texto" largo="3"/>
+                <br>
+                <label>Parcela:</label>
+                <input id="parcelaNN" type="text" tipo="numero" largo="4"/><input id="parcelaTN" type="text" tipo="texto" largo="3"/>
+                <br>
+                <button>Buscar</button>
+            </div> -->
+        </div>
+ <div id="nomenclatura_par" class="x-hidden">
+   <!--  <div>
+        <label>Partido:</label>
+        <input id="partidoPP" type="text" tipo="numero" largo="3"/>
+        <br>
+        <label>Partida:</label>
+        <input id="partidaPP" type="text" tipo="texto" largo="6"/>
+        <br>
+        <button>Buscar</button>
+    </div> -->
+</div>
+<div id="nomenclatura_plano" class="x-hidden">
+    <!-- <div>
+        <label>Partido:</label>
+        <input id="partidoNP" type="text" tipo="numero" largo="3"/>
+        <br>
+        <label>Secuencia:</label>
+        <input id="secuenciaNP" type="text" tipo="texto" largo="6"/>
+        <br>
+        <label>Año:</label>
+        <input id="anioNP" type="text" tipo="texto" largo="6"/>
+        <br>
+        <button>Buscar</button>
+    </div> -->
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48485110-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </body>
+</html>
