@@ -1,7 +1,7 @@
 var groups = {
 	"default": "", // title can be overridden with overlayNodeText
 	"Geoserver": {
-        title: "Geodesia e Im.Satelitales",
+        title: "Fisc. Parcelaria",
         expanded: true,
 	//exclusive: true
     },
