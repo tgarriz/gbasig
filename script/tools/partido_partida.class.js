@@ -211,6 +211,7 @@ var PartidoPartida = new Class({
 	},
 	consultar: function(){
 		var nomenclatura = {
+			//partido: $('partidoPP').value.toInt(),
 			partido: $('partidoPP').value.toInt(),
 			partida: $('partidaPP').value.toInt(),
 		};

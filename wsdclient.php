@@ -23,7 +23,8 @@ else {
         $login = md5('geodesia');
         $pass = md5('geo123');
 
-        $result = $client->call('Obrafim_GetDatosID', array('inp01' => $login,'inp02' => $pass,'id' => $_GET["ido"]));
+        $result = $client->call('Obrafim_GetDatosID', array('inp01' => $login,'inp02' => $pass,'id' => $_GET['ido']));
+//	$result = $client->call('Obrafim_GetDatosID', array('inp01' => $login,'inp02' => $pass,'id' => 446));
         if ($client->fault) {
                 echo '<h2>Fault</h2><pre>'; print_r($result); echo '</pre>';
         } else {
@@ -35,6 +36,8 @@ else {
                         echo '<div class="container">';
                         echo '<div class="page-header">';
                         echo '<h4 align="center"><b>' . $result[0]['Obra'] .'</b></h4>';
+			echo '<h5 align="left"><b>Avance Financiero:</b> ' . $result[0]['avFciero'] .'</h5>';
+			echo '<h5 align="left"><b>ID_PROYECTO:</b> ' . $result[0]['ID_PROYECTO'] .'</h5>';
                         echo '<h5 align="left"><b>Municipio:</b> ' . $result[0]['Municipio'] .'</h5>';
                         echo '<h5 align="left"><b>Fecha Licitacion:</b> ' . $result[0]['Fecha_licitacion'] .'</h5>';
                         echo '<h5 align="left"><b>Observaciones Licitacion:</b> ' . $result[0]['Obs_fecha_licitacion'] .'</h5>';
@@ -57,17 +60,8 @@ else {
 	}
 }
 ?>
-<!--<div id="north">
-    <div id="loading"></div>
-       <div id="logo">
-        <div id="l_bsas"><img src="images/bsas.png"></div>
-           <div id="l_geo"><img src="images/geoinfra.png"></div>
-           <div id="l_min"><img src="images/ministerio.png"></div>
-       </div>
-</div>-->
 <!-- Js vinculados -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="js/responsive.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 </body>
 </html>

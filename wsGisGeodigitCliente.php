@@ -7,9 +7,10 @@ session_start();
 
 	
 	//TODO: acá van las variables ingersadas en el login	
-	$user = $_GET['user'];
-	$pass = $_GET['pass'];
-		
+	//$user = $_GET['user'];
+	//$pass = $_GET['pass'];
+	$user = md5('geodesia');
+	$pass = md5('geo123');
 	
 	//$serverURL = 'http://10.46.3.14/web_geodesia';
 	$serverURL = 'http://www.mosp.gba.gov.ar/web_geodesia';
@@ -53,7 +54,7 @@ session_start();
 	
 	
 	
-/*	echo "<br>result: $result";
+	echo "<br>result: $result";
 	echo "<pre>";
 	echo var_dump($result);
 	echo "</pre>";	
@@ -66,6 +67,6 @@ session_start();
 	// Display the debug messages
 	echo '<h2>Debug</h2>';
 	echo '<pre>' . htmlspecialchars($cliente->debug_str, ENT_QUOTES) . '</pre>';
-*/									
+									
 	
 ?>

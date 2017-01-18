@@ -330,4 +330,17 @@ Ext.onReady(function() {
     partido_partida.init(this);
     numero_plano.init(this);
 
+/*    //Apertura de Popup
+    $(document).ready(function() {
+
+      // Initialize the plugin
+      $('#my_popup').popup({
+        outline: true, // optional
+        focusdelay: 400, // optional
+        vertical: 'right', //optional
+        //horizontal: 'center'
+        });
+      $('#my_popup').popup('show');
+    });
+*/
 });
