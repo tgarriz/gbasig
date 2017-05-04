@@ -179,7 +179,7 @@ var layers = [
         },
 	//CAPAS GEOSERVER (GEODIGIT)
 	 {
-            source: "Desarrollo",
+            source: "Geodesia",
             name: "ParcelarioCompleto",
             visibility: true,
             title: "Parcelario",
@@ -223,7 +223,7 @@ var layers = [
         // CAPAS URBASIG
         {
             source: "urbasig",
-            name: "zonificacion",
+            name: "zonificacion_zonas_espe",
             visibility: false,
             title: "Zonificacion",
             group: "Geoserver"

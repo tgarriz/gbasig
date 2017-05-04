@@ -4,9 +4,9 @@ var sources = {
         title: "Geodesia",
         ptype: "gxp_wmscsource"
     },
-    Desarrollo: {
+    /*Desarrollo: {
     
-	url: "http://desarrollo.geobasig.com.ar/geoserver29/Geodesia/wms?",
+	url: "http://geobasig.com.ar/geoserver29/Geodesia/wms?",
 	title: "Desarrollo",
 	ptype: "gxp_wmscsource"
     },
@@ -14,9 +14,9 @@ var sources = {
         url: "http://cartoservices.arba.gov.ar/geoserver/cartoservice/wms?",
         title: "Arba",
         ptype: "gxp_wmscsource"
-    },
+    },*/
     urbasig: {
-        url: "http://sig.gobierno.gba.gov.ar/geoserver/urbasig/wms?",
+        url: "http://www.urbasig.minfra.gba.gob.ar/geoserver/urbasig/wms?",
         title: "UrbaSig",
         ptype: "gxp_wmscsource"
     },

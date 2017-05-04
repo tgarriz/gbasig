@@ -26,7 +26,7 @@ Ext.onReady(function() {
             	region: "north",
             	border: false,
             	height: 56,
-            	items: [{ html: '<div> <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#9aca3c">  <tr> <td width="20%" align="center"> <img title="Logo Buenos Aires Provincia" src="app/img/logobsas.png" alt="Buenos Aires Provincia" width="30%" high="30%"> </td><td align="center" width="60%" high="10%"> <img title="Logo Geodesia" src="app/img/logogeodesia.png" alt="Direccion de Geodesia" high="30%" width="28%"> </td> <td align="center" width="20%"> <img title="Logo Ministerio de Infraestructura" src="app/img/logomin.png" alt="Ministerio de Infraestructura" width="50%" high="50%" align="rigth"> </td></tr>  </table> </div>'}]
+            	items: [{ html: '<div> <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#99ccff">  <tr> <td width="20%" align="center"> </td><td align="center" width="60%" high="10%"> <img title="Logo Geobasig" src="app/img/logogeodesia.png" alt="Direccion de Geodesia" high="30%" width="28%"> </td> <td align="center" width="20%">   </td></tr>  </table> </div>'}]
             },{
                 id: "centerpanel",
                 xtype: "tabpanel",
@@ -37,6 +37,11 @@ Ext.onReady(function() {
                 			title: "Ayudas",
                 			autoScroll: true,
                 			html: "<iframe src='ayuda.html'>"
+                        },
+			{
+                                        title: "Municipios",
+                                        autoScroll: true,
+                                        html: "<iframe src='muni.html'>"
                         },
 			{
                                         title: "Acerca de",
